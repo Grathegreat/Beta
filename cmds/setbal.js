@@ -52,8 +52,8 @@ module.exports = {
         const amount = parseInt(args[1]);
         const note = args.slice(2).join(' ') || 'No note provided';
 
-        if (!receiverId || isNaN(amount) || amount <= 0 || amount > 10000000) {
-            api.sendMessage('Usage: setbal <receiver_id> <amount> <note> (max 10,000,000)', event.threadID, event.messageID);
+        if (!receiverId || isNaN(amount) || amount <= 0 || amount > 99999999) {
+            api.sendMessage('Usage: setbal <receiver_id> <amount> <note> (max 99.999.999)', event.threadID, event.messageID);
             return;
         }
 
