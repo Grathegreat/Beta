@@ -4,7 +4,7 @@ const path = require('path');
 
 const MAX_COINS = 999999999999; // 999 billion
 
-const MIN_DEPOSIT = 900000000000; // 900 billion
+const MIN_DEPOSIT = 100; // 900 billion
 
 const coinBalancesPath = path.join(__dirname, '../database/coin_balances');
 
