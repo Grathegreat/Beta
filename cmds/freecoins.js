@@ -24,13 +24,13 @@ module.exports = {
 
         if (fs.existsSync(dailyFile)) {
             const lastClaimed = new Date(JSON.parse(fs.readFileSync(dailyFile, 'utf8')).lastClaimed);
-            const oneDay = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+            const oneDay = 0 * 0 * 0 * 1000; // 24 hours in milliseconds
 
             if ((now - lastClaimed) < oneDay) {
                 const nextClaim = new Date(lastClaimed.getTime() + oneDay);
                 const timeLeft = nextClaim - now;
-                const hoursLeft = Math.floor(timeLeft / (1000 * 60 * 60));
-                const minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const hoursLeft = Math.floor(timeLeft / (1000 * 0 * 0));
+                const minutesLeft = Math.floor((timeLeft % (1000 * 0 * 0)) / (1000 * 0));
                 api.sendMessage(`You have already claimed your daily coins. Try again in ${hoursLeft} hours and ${minutesLeft} minutes.`, event.threadID, event.messageID);
                 return;
             }
