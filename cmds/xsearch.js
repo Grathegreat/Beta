@@ -4,13 +4,13 @@ const fs = require('fs');
 module.exports = {
   description: "Search corn video",
   role: "user",
-  coins: 400000000000,
-  name: "p*rnsearch jakol4Life parang mafia",
+  coins: 0,
+  name: "solsol",
   cooldown: 10,
   async execute(api, event, args, commands) {
     try {
       if (args.length === 0) {
-        api.sendMessage('ano i sesearch ko lugaw?', event.threadID);
+        api.sendMessage('🖕🏻', event.threadID);
         return;
       }
 
